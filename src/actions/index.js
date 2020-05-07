@@ -1,9 +1,10 @@
 // Actions Creators
+
 // named export to  export functions from single file
-export const SelectSong = (song)=>{
-    // return an action
+export const selectSong = ()=>{
+    // return object action: {type, payload}
     return {
-        type: "SONG_SELECTED",
-        payload: song
-    };
-}
+        type: 'SELECTED_SONG',
+        payload: song,
+    }
+};

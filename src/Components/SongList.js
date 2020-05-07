@@ -20,8 +20,6 @@ class SongList extends Component {
             );
         });
     }
-    
-
 
     render(){
        // props will include dispatch function from store  
@@ -38,8 +36,9 @@ class SongList extends Component {
 // get the state from reducer
 // function can be named anything
 // it will pass state to props so that child component can render the state
-const mapStateToProps = state =>{
-    // console.log(state); this will return objecs inclue : selectedSong, sngs
+const mapStateToProps = (state )=>{
+    console.log(state); 
+    //this will return objecs  {selectedSong, songs} from reducers
     // this.props = state
     return {songs: state.songs};
 }   

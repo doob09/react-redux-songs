@@ -1,24 +1,24 @@
 import {combineReducers} from 'redux';
 
-const songsReducers = ()=>{
+const songsReducer = ()=>{
+// static state just for simple example
+// array of object
     return [
-            {title: "No Scrubs"  , duration: "4:05"},
-            {title: "Mara"  , duration: "2:05"},
-            {title: "All Star"  , duration: "3:05"},
-            {title: "I want"  , duration: "1:05"},
-        ]
-    ;
+        {title: 'song 1', duration: '2:30'},
+        {title: 'song 2', duration: '3:10'},
+        {title: 'song 3', duration: '4:05'},
+        {title: 'song 4', duration: '2:05'},
+    ];
 };
 
-const selectedSongReducers = (selectedSong = null, action)=>{
-    if(action === 'SONG_SELECTED'){
+const selectedSongReducer = (selectedSong = null, action)=>{
+    if(action.type === 'SELECTED_SONG'){
         return action.payload;
     }
-
     return selectedSong;
 };
 
-export default combineReducers ({
-    songs: songsReducers,
-    selectedSong:selectedSongReducers
+export default combineReducers({
+   songs: songsReducer,
+   selectedSong: selectedSongReducer
 });

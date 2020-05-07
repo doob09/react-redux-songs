@@ -1,7 +1,7 @@
 import React from 'react';
 import SongList from './SongList';
 
-export default function App() {
+const App = ()=> {
     return (
         <div className="ui container grid">
             <div className="ui row">
@@ -13,3 +13,5 @@ export default function App() {
         </div>
     )
 }
+
+export default App;

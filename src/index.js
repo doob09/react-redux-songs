@@ -7,8 +7,8 @@ import App from './Components/App';
 import reducers from './reducers';
 
 ReactDOM.render(
-    // DI - singleton?
-    <Provider store={createStore(reducers)}>
+    // DI - singleton
+    <Provider store = {createStore(reducers)}>
         <App/>
     </Provider>
     , document.querySelector('#root'));
